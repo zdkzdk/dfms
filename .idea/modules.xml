@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common-ui/common-ui.iml" filepath="$PROJECT_DIR$/common-ui/common-ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fms/fms.iml" filepath="$PROJECT_DIR$/fms/fms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/permission/permission.iml" filepath="$PROJECT_DIR$/permission/permission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/permissioncommons/permissioncommons.iml" filepath="$PROJECT_DIR$/permissioncommons/permissioncommons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/usercenter/usercenter.iml" filepath="$PROJECT_DIR$/usercenter/usercenter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/usercentercommons/usercentercommons.iml" filepath="$PROJECT_DIR$/usercentercommons/usercentercommons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/usercenterservice/usercenterservice.iml" filepath="$PROJECT_DIR$/usercenterservice/usercenterservice.iml" />
+    </modules>
+  </component>
+</project>

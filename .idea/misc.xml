@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/usercenter/pom.xml" />
+        <option value="$PROJECT_DIR$/common-ui/pom.xml" />
+        <option value="$PROJECT_DIR$/usercentercommons/pom.xml" />
+        <option value="$PROJECT_DIR$/usercenterservice/pom.xml" />
+        <option value="$PROJECT_DIR$/permission/pom.xml" />
+        <option value="$PROJECT_DIR$/permissioncommons/pom.xml" />
+        <option value="$PROJECT_DIR$/fms/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

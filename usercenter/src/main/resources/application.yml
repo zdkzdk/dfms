@@ -1,0 +1,83 @@
+
+#server
+server:
+  port: 1000
+
+# Dubbo \u670D\u52A1\u6D88\u8D39\u8005\u914D\u7F6E
+
+dubbo:
+  scan: cn.dc.usercenter.service
+  application:
+    name: finance-usercenter-consumer
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20000
+  registry:
+    #address: 192.168.100.128:2181
+    #,zookeeper://192.168.100.128:2182,zookeeper://192.168.100.128:2183
+    #id: my-registry
+    protocol: zookeeper
+    address: zkserver:2181,zkserver:2182,zkserver:2183
+  consumer:
+    timeout: 9000
+#    Dubbo缺省会在启动时检查依赖的服务是否可用，不可用时会抛出异常，阻止Spring初始化完成，以便上线时，能及早发现问题，默认check=true。
+#    如果Spring容器是懒加载的，或者通过API编程延迟引用服务，请关闭check，否则服务临时不可用时，会抛出异常，拿到null引用，如果check=false，总是会返回引用，当服务恢复时，能自动连上。
+    check: "false"
+#FTP\u7684\u5E38\u91CF
+FTP_HOST: 192.168.100.128
+FTP_PORT: 21
+FTP_USERNAME: ftpuser
+FTP_PWD: ftpuser
+FTP_IMG_BASEPATH: /home/${FTP_USERNAME}
+FTP_IMG_FILEPATH: /jd
+FTP_HTTP_DOMAIN: http://image.taobao.com
+#thymeleaf\u89C6\u56FE
+ui:
+  path: http://ui.dc.cn:1001/
+spring:
+  application:
+    name: ucenter-web
+  thymeleaf:
+    prefix: ${ui.path}
+    template-resolver-order: 0
+    suffix:
+    encoding: UTF-8
+    cache: false
+#redis
+  redis:
+    #redis数据库地址
+    host: 192.168.100.130
+    port: 6379
+    timeout: 1000
+    #redis数据库索引，默认0
+    database: 0
+    jedis:
+      pool:
+        max-wait: 10000
+  #配置数据源
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/zheng?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+#指定mybatis映射文件的地址
+mybatis:
+  mapper-locations: classpath:cn.dc.permission.mapper/*.xml
+shiro:
+  userNativeSessionManager: true
+
+
+
+# RestTemplate
+rest:
+  # 读取超时时间 单位:毫秒
+  readTimeOut: 8000
+  # 连接超时时间
+  connectTimeOut: 5000
+  # 单个主机的最大连接数
+  maxConnectPerRoute: 20
+  # 连接池的最大连接池
+  maxTotalConnect: 0
+
+
